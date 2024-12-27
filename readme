@@ -80,3 +80,21 @@ Creamos los controladores, hacemo el archivo auth.js mas escalable
 
 Impelmentamos la recuperacion del payload
 Errores http: https://www.restapitutorial.com/httpstatuscodes
+
+## 378 Express validator
+npm i express-validator
+
+Este validator usa un middleware, pero no se pone en el index, sino que se pone en el router auth.js
+
+
+```
+router.post("/new",
+     [
+        check('name','el nombre es obligatorio').not().isEmpty(),
+        check('email','el nombre es obligatorio').isEmail(),
+        check('password','Password debe tener mas de 6 caracteres').isLength({min:6}) ,
+     ]
+    ,crearUsuario);
+```
+
+
