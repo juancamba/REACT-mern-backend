@@ -6,18 +6,7 @@ const crearUsuario = (req, res=  response)=>{
     const {name, email, password} = req.body;
     
     
-    //manejo errores
-
-    const errors = validationResult(req);
-
-    if(!errors.isEmpty()){
-        return res.status(400).json({
-            ok: false,
-            errors: errors.mapped()
-        })
-    }
-
-    console.log(errors)
+    // errorees en middleware
     
     res.status(201).json({
         ok: true,
@@ -35,17 +24,7 @@ const loginUsuario = (req, res= response)=>{
     
     const {name, password} = req.body;
 
-
-     //manejo errores
-
-     const errors = validationResult(req);
-
-     if(!errors.isEmpty()){
-         return res.status(400).json({
-             ok: false,
-             errors: errors.mapped()
-         })
-     }
+    // errorees en middleware
     
     res.json({
         ok: true,
