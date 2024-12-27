@@ -1,0 +1,29 @@
+## 372 Inicio del backend
+crear un proyecto node
+npm init -y
+
+lanzar un node
+node index.js
+
+Instalar nodemon: es para ejecutar de forma recurrente el node, ya que sino es euna aplicación de consola. Este lo instalamos de forma global
+
+npm i nodemon -g
+
+
+nodemon index.js
+
+Luego agrego estas lineas al package json para facilitar el arrancado
+
+```
+"scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+```
+
+Esto quiere decir que en producción arranco con npm start y en desarrollo con npm run dev
+
+
+## 373 configuracion express
+
+npm i express
