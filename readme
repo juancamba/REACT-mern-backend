@@ -77,3 +77,6 @@ module.exports = router;
 Creamos los controladores, hacemo el archivo auth.js mas escalable
 
 ## 377 Recuperar informacion posteos
+
+Impelmentamos la recuperacion del payload
+Errores http: https://www.restapitutorial.com/httpstatuscodes
