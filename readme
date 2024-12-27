@@ -51,4 +51,24 @@ console.log(process.env) // ver las variables que tiene el sistema, la nuestra d
 Para llamar la variable de entorno process.env.PORT
 
 
-## 375
+## 375 Rutas
+en el index.js
+// Rutas
+app.use('/api/auth', require("./routes/auth") );
+
+en el archivo /routes/auth
+
+```
+const {Router} = require('express');
+
+const router = Router();
+
+router.get("/",(req, res)=>{
+    res.json({
+        ok: true
+
+    })
+})
+
+module.exports = router;
+```
