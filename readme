@@ -27,3 +27,28 @@ Esto quiere decir que en producción arranco con npm start y en desarrollo con n
 ## 373 configuracion express
 
 npm i express
+
+## 374 
+
+Se crea la carpeta public y un index.html. 
+
+Luego en el index.js
+
+app.use( express.static('public'));
+
+Esto sive el html en /
+
+### Creamos archivo .env con una variable de entorno.
+
+Para usar variables de entorno en node hace falta instalar el paquete npm i dotenv
+
+Luego metemos en index.js
+
+require('dotenv').config();
+
+console.log(process.env) // ver las variables que tiene el sistema, la nuestra deberia estar
+
+Para llamar la variable de entorno process.env.PORT
+
+
+## 375
