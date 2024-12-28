@@ -144,3 +144,6 @@ Creamos el archivo validar-jwt
 
 
 ## 388 configurar cors
+npm i cors
+
+Esto es un middleware por tanto va en index.js
