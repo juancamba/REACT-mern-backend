@@ -103,4 +103,7 @@ Se crea en la carpeta middlewares
 
 En el router hay que agregar la referencia a validarcampos
 
+## 370 configurar base de datos
+mongoose orm para mongo
+En este vamos a ver mongodb atlas. Nos permite usar bd en la nube. Use la cuenta de google
 
