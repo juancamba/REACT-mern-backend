@@ -116,3 +116,10 @@ Creacion clase Usuario, el modelo y su definición de tipos.
 Grabar un usuario en bd
 
 Mongoose, al igual que la mayoria de los orm guarda usuario como usuarios
+
+
+## 383 validaciones al guardar en bd
+Agregamos comprobacion para lanzar error si existe en bd un usuario con ese email
+
+
+## 384 encriptar contraseña
