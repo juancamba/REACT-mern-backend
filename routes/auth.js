@@ -16,7 +16,7 @@ router.post("/new",
 
 router.post("/", 
     [
-        check('name','el nombre es obligatorio').not().isEmpty(),
+        check('email','el nombre es obligatorio').isEmail(),
         
         check('password','Password debe tener mas de 6 caracteres').isLength({min:6}) ,
         validarCampos

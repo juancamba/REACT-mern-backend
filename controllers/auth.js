@@ -50,20 +50,51 @@ const crearUsuario = async (req, res=  response)=>{
 
 }
 
-const loginUsuario = (req, res= response)=>{
+const loginUsuario = async (req, res= response)=>{
     
-    const {name, password} = req.body;
+    const {email, password} = req.body;
 
-    // errorees en middleware
-    
-    res.json({
-        ok: true,
-        msg: 'login',
-        name,
+    try {
         
-        password
+        let usuarioEnBd = await Usuario.findOne({email});
+        
+        if(!usuarioEnBd ){
+            return res.status(400).json({
+                ok: false,
+                msg: `el usuario no existe con ese email`
+            })
+        }
 
-    })
+        // confirmar password
+
+        const validPassword = bcrypt.compareSync(password, usuarioEnBd.password)
+        if(!validPassword){
+            return res.status(400).json({
+                ok: false,
+                msg: `Password incorrecto`
+            })
+        }
+
+        // generar jwt
+
+        res.json({
+            ok: true,
+            msg: 'logged',
+            uid: usuarioEnBd.id,
+            name: usuarioEnBd.name
+    
+        })
+
+
+    } catch (error) {
+        res.status(500).json({
+            ok: false,
+            msg: "Hable con el admin"
+        })
+        
+    }
+    
+    
 }
 
 const revalidarToken = (req, res)=>{

@@ -1,3 +1,6 @@
+# Backend con Mern Mongo, Express , r y Node
+Ejecutar con npm run dev
+
 ## 372 Inicio del backend
 crear un proyecto node
 npm init -y
@@ -22,6 +25,7 @@ Luego agrego estas lineas al package json para facilitar el arrancado
 ```
 
 Esto quiere decir que en producción arranco con npm start y en desarrollo con npm run dev
+
 
 
 ## 373 configuracion express
