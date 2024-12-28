@@ -108,7 +108,7 @@ mongoose orm para mongo
 En este vamos a ver mongodb atlas. Nos permite usar bd en la nube. Use la cuenta de google
 
 ## 381 configurar bd
-
+instalamos mongoose con npm i mongoose
 
 ## 382 modelos con moongoose
 Creacion clase Usuario, el modelo y su definición de tipos.
@@ -123,3 +123,4 @@ Agregamos comprobacion para lanzar error si existe en bd un usuario con ese emai
 
 
 ## 384 encriptar contraseña
+npm i bcryptjs
