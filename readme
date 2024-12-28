@@ -107,3 +107,12 @@ En el router hay que agregar la referencia a validarcampos
 mongoose orm para mongo
 En este vamos a ver mongodb atlas. Nos permite usar bd en la nube. Use la cuenta de google
 
+## 381 configurar bd
+
+
+## 382 modelos con moongoose
+Creacion clase Usuario, el modelo y su definición de tipos.
+
+Grabar un usuario en bd
+
+Mongoose, al igual que la mayoria de los orm guarda usuario como usuarios
