@@ -139,3 +139,8 @@ Se crea la helper jwt.js
 Se implementa el token en login y crear usuario
 
 
+## 387 se agrega el middleware para validar el jwt
+Creamos el archivo validar-jwt
+
+
+## 388 configurar cors
