@@ -128,3 +128,8 @@ Agregamos comprobacion para lanzar error si existe en bd un usuario con ese emai
 
 ## 384 encriptar contraseña
 npm i bcryptjs
+
+## 385 recuperar contraseña y compararla encriptada 
+Esto es al hacer login
+
+## 386 generar jwt
