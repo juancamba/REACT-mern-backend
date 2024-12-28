@@ -133,3 +133,9 @@ npm i bcryptjs
 Esto es al hacer login
 
 ## 386 generar jwt
+npm i jsonwebtoken
+
+Se crea la helper jwt.js
+Se implementa el token en login y crear usuario
+
+

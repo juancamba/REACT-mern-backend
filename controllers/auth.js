@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs')
 const { validationResult } = require('express-validator')
 
 const Usuario = require('../models/Usuario')
+const { generarJwt } = require('../helpers/jwt')
 
 const crearUsuario = async (req, res=  response)=>{
     
@@ -29,14 +30,16 @@ const crearUsuario = async (req, res=  response)=>{
 
 
         await usuario.save();
-        // errorees en middleware
-        
+        // generar jwt
+
+        const token = await generarJwt(usuario.id, usuario.name);
+
         res.status(201).json({
             ok: true,
             msg: 'registro',
             uid: usuario.id,
             name: usuario.name,
-
+            token
           
     
     
@@ -74,19 +77,22 @@ const loginUsuario = async (req, res= response)=>{
                 msg: `Password incorrecto`
             })
         }
-
+        
         // generar jwt
-
+        const token = await generarJwt(usuarioEnBd.id, usuarioEnBd.name);
+        
         res.json({
             ok: true,
             msg: 'logged',
             uid: usuarioEnBd.id,
-            name: usuarioEnBd.name
+            name: usuarioEnBd.name,
+            token
     
         })
 
 
     } catch (error) {
+        console.log(error)
         res.status(500).json({
             ok: false,
             msg: "Hable con el admin"
