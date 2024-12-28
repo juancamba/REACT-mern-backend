@@ -147,3 +147,11 @@ Creamos el archivo validar-jwt
 npm i cors
 
 Esto es un middleware por tanto va en index.js
+
+## 389 en adelente
+se crea modelo, routes y controlador para los eventos ( las notas)
+Se hace pasar el por el validar token
+
+
+## 395 uso de un custom para validar fechas 
+npm i moment
