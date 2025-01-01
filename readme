@@ -155,3 +155,19 @@ Se hace pasar el por el validar token
 
 ## 395 uso de un custom para validar fechas 
 npm i moment
+
+
+## 396 agregamos guardado y retorno de objeto tipo dto
+Algo parecido al dto
+
+
+## 397 getEventos
+Uso de find() y populate para rellenar los objetos relacionados
+```
+// trae los eventos, ademas añede el objeto usuario los campos name y email
+    const eventos = await Evento.find().populate('user','name email');
+```
+
+## 398 actualizar eventos
+
+## 399 eliminar eventos
