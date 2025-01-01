@@ -181,3 +181,10 @@ Uso de find() y populate para rellenar los objetos relacionados
 ## 398 actualizar eventos
 
 ## 399 eliminar eventos
+
+
+## 405 Despliegue en Railway (nube)
+[https://railway.com/](https://railway.com/)
+
+Simplemente reemplaza las variables de entorno
+
